@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Mock.js的demo</title>
+		
+	</head>
+	
+	<body>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<script src="http://mockjs.com/dist/mock.js"></script>
+		<script>
+		// 使用 Mock
+		var data = Mock.mock({
+		    'list|1-10': [{
+		        'id|+1': 1
+		    }],
+		    'list1|1-10': [{
+		        'id|+1': 1
+		    }],
+		     "messageTitle|1-10": [{
+		     	'title|+1':[
+		     			"今天西安限号",
+		     	         "今天西安因雾霾停课",
+		     	         "今天不上班"
+		     			]
+		     	          
+		     	
+		     }]
+		});
+		$('<pre>').text(JSON.stringify(data, null, 4))
+		.appendTo('body')
+		</script>
+	</body>
+</html>
